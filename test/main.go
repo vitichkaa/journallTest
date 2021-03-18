@@ -25,13 +25,13 @@ func main() {
 func Find() {
 	var data []obj
 	collection.Find(obj{"_id": obj{"$in": []uint64{7, 8, 9, 10, 11, 12}}}).All(&data)
-	fmt.Println(data)
+	fmt.Println("Текущий:", data)
 }
 
 func Find2() {
 	var data []obj
 	collection.Find(obj{"_id": obj{"$in": []uint64{7, 8, 9, 10, 11, 12}}}).All2(&data)
-	fmt.Println(data)
+	fmt.Println("Исправленый:", data)
 }
 
 func isertTestData() {
